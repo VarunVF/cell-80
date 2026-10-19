@@ -1,6 +1,6 @@
 # cell-80
 
-A small esolang.
+A small esolang, based on an array of 80 cells.
 
 ## Syntax
 
@@ -22,9 +22,17 @@ Operators:
 - `!` : set jump register to current line, only allowed on last column
 - `?` : jump if cell is not zero (execution continues at line stored in jump register)
 
-The trailing newline characters (`CR`, `LF`) are allowed.
+The trailing newline characters (`CR`, `LF`) are allowed and do not count towards the 80-character limit.
 Other characters are not allowed.
 
 Example programs:
 - `add-six.c80`: Takes an integer as user input, adds 6, shifts the result to another cell, then prints the result.
 - `hello-world.c80`: Hello world program, using loops.
+
+## Usage
+
+Run the interpreter with the `.c80` file as an argument. For example:
+
+```bash
+python cell-80.py hello-world.c80
+```
